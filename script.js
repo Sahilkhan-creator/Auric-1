@@ -1,14 +1,33 @@
-document.getElementById("login-form")?.addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Login Successful!");
-});
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
+    const applyForm = document.getElementById("apply-form");
 
-document.getElementById("signup-form")?.addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Account Created Successfully!");
-});
+    if (loginForm) {
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            localStorage.setItem("user", email);
+            window.location.href = "homepage.html";
+        });
+    }
 
-document.getElementById("apply-form")?.addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Your request has been submitted!");
+    if (signupForm) {
+        signupForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const email = document.getElementById("signup-email").value;
+            const password = document.getElementById("signup-password").value;
+            localStorage.setItem("user", email);
+            window.location.href = "index.html";
+        });
+    }
+
+    if (applyForm) {
+        applyForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your request has been submitted!");
+            window.location.href = "success.html";
+        });
+    }
 });
