@@ -7,29 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Apply for Web Development</h2>
-    <form action="mailto:mineblade3535@gmail.com" method="post">
-        <label>Budget:</label>
-        <select name="budget">
-            <option>$50</option>
-            <option>$75</option>
-            <option>$100</option>
-        </select>
-        <label>Web Type:</label>
-        <select name="type">
-            <option>Business Website</option>
-            <option>Portfolio</option>
-            <option>eCommerce</option>
-        </select>
-        <label>Preferred Language:</label>
-        <select name="language">
-            <option>HTML, CSS, JS</option>
-            <option>React.js</option>
-            <option>PHP & MySQL</option>
-        </select>
-        <label>Additional Notes:</label>
-        <textarea name="notes"></textarea>
-        <button type="submit">Submit Request</button>
-    </form>
+    <div class="apply-container">
+        <h2>Apply for Web Development</h2>
+        <form id="apply-form">
+            <label for="budget">Select Budget:</label>
+            <select id="budget">
+                <option>$50</option>
+                <option>$75</option>
+                <option>$100</option>
+            </select>
+
+            <label for="web-type">Type of Website:</label>
+            <select id="web-type">
+                <option>Portfolio</option>
+                <option>Business</option>
+                <option>E-commerce</option>
+                <option>Other</option>
+            </select>
+
+            <label for="features">Additional Features:</label>
+            <textarea id="features" placeholder="Describe extra features you need"></textarea>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="customer-email" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
-</html
+</html>
